@@ -12,6 +12,13 @@
   
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 24
+}
 
 html, body{
   height: 100vh;
@@ -35,7 +42,8 @@ body {
 }
 
 .logo {
-  margin-right: auto; /* Empuja el logo hacia la izquierda */
+  /* margin-right: auto; Empuja el logo hacia la izquierda */
+  margin-right: 12%;
   display: flex;
   align-items: center;
 }
@@ -61,15 +69,33 @@ body {
 
 .search-bar {
   margin-right: 10px;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar span{
+  padding: 8px ;
 }
 
 .search-bar input {
-  width: 200px;
-  height: 30px;
-  padding: 5px;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
   border: none;
-  border-radius: 5px;
-  background-color: #f4f4f4;
+  background-color: inherit;
+  
+  font-weight: 300;
+  
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.search-icon{
+  height: 40px;
+  background-color: inherit;
 }
 
 .user-logo img {
@@ -136,10 +162,7 @@ aside{
 
 ::-webkit-scrollbar-thumb{
 	background-color: #CBCBCB;
-	/* outline: 0px; */
-	/* outline-offset: -2px; */
-	/* border: .1px solid #B7B7B7; */
-  border-radius: 6px;
+  border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
