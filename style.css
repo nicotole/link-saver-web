@@ -1,21 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Ubuntu:wght@300;400;500&display=swap');
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Ubuntu';
+  color: #0f0f0fb4;
+  font-weight: bold;
+  font-size: 15px;
+  
 }
 
 
 html, body{
   height: 100vh;
   background-color: #f1f1f1;
+  background-color: white;
 }
 
-nav{
-  width: 100%;
-  height: 50px;
-  background-color: #fcfcfc;
-    
-} 
 body {
   margin: 0;
   padding: 0;
@@ -23,15 +26,28 @@ body {
 }
 
 .navbar {
+  width: 100%;
+  height: 75px;
+  background-color: #fcfcfc;
   display: flex;
   align-items: center;
-  height: 50px;
-  background-color: #fcfcfc; 
   padding: 0 20px;
 }
 
 .logo {
   margin-right: auto; /* Empuja el logo hacia la izquierda */
+  display: flex;
+  align-items: center;
+}
+
+.logo p{
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo span {
+  width: 30px;
 }
 
 .logo img {
@@ -62,42 +78,71 @@ body {
 
 aside{
   background-color: #fcfcfc;
-  width: 17%;
+  width: 20%;
+  /* padding-left: 10px; */
+  padding: 0 10px;
+  margin: 20px;
+  height: 80vh;
 }
 
 .lists{
   width: 100%;
-  height: 100vh;
+  height: 90%;
   background-color: #fcfcfc;
   overflow: scroll;
 }
 
 .lists li{
   height: 50px;
-  border-top: 1px solid red;
-  border-bottom: 1px solid green;
+  /* border-top: 1px solid red;
+  border-bottom: 1px solid green; */
   display: flex;
   align-items: center;
   padding: 20px;
+  font-weight: bold;
+  color: #0f0f0fb4;
 }
 
-.lists li i{
-  margin-right: 10px;
+.lists li span{
+  margin-right: 15px;
+  color: rgb(17, 16, 16);
+  color: #0f0f0fb4;
 }
 
 .add-box{
   display: flex;
   align-items: center;
+  padding: 10px 20px;
+  border-bottom: 2px solid rgba(247,247,247,255);
 }
 
 .add-box p{
   font-size: large;
-  padding-left: 20px;
 }
 
 .add-box span{
-  margin-left: 70px;
+  margin-left: 50%;
 }
 
+/* scrollbar */
 
+::-webkit-scrollbar{
+	width: 10px;
+}
+
+::-webkit-scrollbar-track-piece{
+  background-color: #fcfcfc;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #CBCBCB;
+	/* outline: 0px; */
+	/* outline-offset: -2px; */
+	/* border: .1px solid #B7B7B7; */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color: #909090;
+}
 
