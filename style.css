@@ -9,7 +9,7 @@
   color: #0f0f0fb4;
   font-weight: bold;
   font-size: 15px;
-  
+
 }
 
 .material-symbols-outlined {
@@ -38,11 +38,11 @@ html, body{
 
   background: rgb(244,244,244);
   background: linear-gradient(180deg, rgba(244,244,244,1) 51%, rgba(252,252,252,1) 63%, rgba(252,252,252,1) 100%);
-  /* 
+  /*
   background: rgb(244,244,244);
   background: linear-gradient(180deg, rgba(244,244,244,1) 58%, rgba(252,252,252,1) 77%, rgba(252,252,252,1) 100%); */
 
-  
+
 }
 
 body {
@@ -93,8 +93,6 @@ body {
   background-color: #f4f4f4;
   display: flex;
   align-items: center;
-
-  
 }
 
 .search-bar span{
@@ -107,12 +105,11 @@ body {
   padding: 10px;
   border: none;
   background-color: inherit;
-  
+
   font-weight: 300;
 
   box-shadow: inset 0px 10px 28px -18px rgba(0,0,0,0.1);
-  
-  
+
   &:focus {
     outline: none;
   }
@@ -127,7 +124,7 @@ body {
 }
 
 .user-logo img {
-  height: 30px; 
+  height: 30px;
 }
 
 aside{
@@ -243,3 +240,37 @@ aside{
   padding-left: 5px;
   /* font-size: 10px; */
 }
+
+.link-card input{
+  width: 80%;
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid #90909061;
+  font-weight: 300;
+
+  &:focus {
+    outline: none;
+  }
+
+  /* &:active {
+    border: 1px solid #3593fd61;
+  } */
+}
+
+.link-card button{
+  margin-left: 10px;
+  height: 40px;
+  width: 200px;
+  border: none;
+  color: white;
+  background: rgb(58, 147, 249);
+  font-size: 15px;
+  font-weight: 400;
+
+  &:hover{
+    background: rgb(0, 115, 247);
+    transition: all .3s;
+  }
+
+}
+
