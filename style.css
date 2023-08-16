@@ -220,6 +220,7 @@ aside{
   height: 100%;
   background-color: white;
   padding: 20px;
+  padding-top: 0px;
   overflow: scroll;
   scroll-behavior: smooth;
 }
@@ -274,3 +275,8 @@ aside{
 
 }
 
+.fixed{
+  top: 0; 
+  position: sticky;
+  background-color: white;
+}
