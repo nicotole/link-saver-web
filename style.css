@@ -183,7 +183,22 @@ aside{
 }
 
 .add-box span{
+  color: white;
+  background: rgb(58, 147, 249);
+  
+  border-radius: 50%;
+  border: none;
+
+  &:hover{
+    background: rgb(0, 115, 247);
+    transition: all .3s;
+  }
+}
+
+.add-box button{
   margin-left: 40%;
+  background: transparent;
+  border: none;
 }
 
 /* scrollbar */
