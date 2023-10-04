@@ -1,46 +1,22 @@
 import React from 'react'
+import { Link } from './Link'
 
-export const LinkList = () => {
+export const LinkList = ({currentList}) => {
   return (
-    <> 
-        <ul>
-            <li className='link-card'>
-            <a href='https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' rel="noreferrer" target="_blank">https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' rel="noreferrer" target="_blank">https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.semrush.com/blog/open-graph/' rel="noreferrer" target="_blank">https://www.semrush.com/blog/open-graph/</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' rel="noreferrer" target="_blank">https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' rel="noreferrer" target="_blank">https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.semrush.com/blog/open-graph/' rel="noreferrer" target="_blank">https://www.semrush.com/blog/open-graph/</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' rel="noreferrer" target="_blank">https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' rel="noreferrer" target="_blank">https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.semrush.com/blog/open-graph/' rel="noreferrer" target="_blank">https://www.semrush.com/blog/open-graph/</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' rel="noreferrer" target="_blank">https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' rel="noreferrer" target="_blank">https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO</a>
-            </li>
-            <li className='link-card'>
-            <a href='https://www.semrush.com/blog/open-graph/' rel="noreferrer" target="_blank">https://www.semrush.com/blog/open-graph/</a>
-            </li>
-        </ul>
+    <>
+      <ul>
+        {currentList != null ? (
+            currentList.map((link, index) => (
+              <Link key={index} link={ link }/>
+            ))
+          )
+          :(
+            <p>No hay links</p>
+          )
+        }
+      </ul>
     </>
   )
 }
+
+
