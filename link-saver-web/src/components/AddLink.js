@@ -5,11 +5,18 @@ export const AddLink = ({setCurrentList}) => {
   const getFormData = e => {
     e.preventDefault();// stops the default behavior in the submitform
 
+    //getting the values from the DOM
     let target = e.target;
     let newLink = target.newLink.value;
 
+    //creating link
+    let newLinkObj = {
+      'id' : new Date().getTime(), //we use this as a unique key until we have the backend
+      'link' : newLink 
+    }
+
     setCurrentList( elements => {
-      return[newLink, ...elements];
+      return[newLinkObj, ...elements];
     });
   }
 
