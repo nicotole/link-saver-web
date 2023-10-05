@@ -6,8 +6,8 @@ export const LinkList = ({currentList}) => {
     <>
       <ul>
         {currentList != null ? (
-            currentList.map((link, index) => (
-              <Link key={index} link={ link }/>
+            currentList.map( link => (
+              <Link key={ link.id } link={ link }/>
             ))
           )
           :(

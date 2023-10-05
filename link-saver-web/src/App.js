@@ -9,8 +9,24 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [ superList , setSuperList ] = useState([]);
-  const [ currentList , setCurrentList] = useState(['https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO', 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO', 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO', 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' , 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO', 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO']);
+  //superList its a list of lists, this lists save the whole data temporaly
 
+  const [ currentList , setCurrentList] = 
+  useState([
+            {
+              'id': 0 ,
+              'link': 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO'
+            },
+            {
+              'id': 1 ,
+              'link': 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO'
+            },
+            {
+              'id': 2 ,
+              'link': 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO'
+            }
+          ]);
+  //currentList its the list that we are currently showing
 
   //instead of useing an state to save the name and key of the sublist im gonna use a object, in fact i can use objects instead of arrays. At least for the sublist element items
 
