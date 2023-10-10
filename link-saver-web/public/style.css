@@ -293,6 +293,7 @@ aside{
 
 .link-input{
   top: 0; 
-  position: sticky;
+  position: sticky; 
   background-color: white;
 }
+

@@ -22,12 +22,12 @@ export const AddLink = ({setCurrentList}) => {
 
   return (
     <> 
-        <form onSubmit={ getFormData }>
-          <div className="link-card link-input">
-            <input required name="newLink" type="text" placeholder="Nuevo link..."></input>
-            <button>Agregar</button>
-          </div>
-        </form>
+      <form  onSubmit={ getFormData }>
+        <div className="link-card link-input">
+          <input required name="newLink" type="text" placeholder="Nuevo link..."></input>
+          <button>Agregar</button>
+        </div>
+      </form>
     </>
   )
 }

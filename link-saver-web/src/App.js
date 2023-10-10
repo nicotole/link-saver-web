@@ -8,7 +8,26 @@ import { useEffect, useState } from 'react';
  
 function App() {
 
-  const [ superList , setSuperList ] = useState([]);
+  const [ superList , setSuperList ] = useState(
+    [
+      {
+        id: 1,
+        nombre: 'Youtube',
+        enlaces: [
+          { id: 0, link: 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' },
+          { id: 2, link: 'https://www.youtube.com/watch?v=GBRAnuT48qo' }
+        ]
+      },
+      {
+        id: 2,
+        nombre: 'Lista 2',
+        enlaces: [
+          { id: 3, link: 'https://example.com/link3' },
+          { id: 4, link: 'https://example.com/link4' }
+        ]
+      }
+    ]
+  );
   //superList its a list of lists, this lists save the whole data temporaly
 
   const [ currentList , setCurrentList] = 
@@ -52,7 +71,7 @@ function App() {
     <section className='content'>
       <aside>
         <AddBox />
-        <ListLists />
+        <ListLists superList={superList}/>
       </aside>
       <section className='link-list'>
         <AddLink setCurrentList={setCurrentList}/>

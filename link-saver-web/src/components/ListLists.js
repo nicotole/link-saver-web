@@ -1,45 +1,19 @@
 import React from 'react'
 
-export const ListLists = () => {
+export const ListLists = ({superList}) => {
   return (
     <>
-        <ul className="lists">
-            <li><span className="material-symbols-outlined">list</span>Facebook</li>
-            <li><span className="material-symbols-outlined">list</span>Favoritos</li>
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>
-            <li><span className="material-symbols-outlined">list</span>Divertidos</li>
-            <li><span className="material-symbols-outlined">list</span>Varios</li>
-            <li><span className="material-symbols-outlined">list</span>Facebook</li>
-            <li><span className="material-symbols-outlined">list</span>Favoritos</li>
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>           
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>
-            <li><span className="material-symbols-outlined">list</span>Divertidos</li>
-            <li><span className="material-symbols-outlined">list</span>Varios</li>
-            <li><span className="material-symbols-outlined">list</span>Facebook</li>
-            <li><span className="material-symbols-outlined">list</span>Favoritos</li>
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>
-            <li><span className="material-symbols-outlined">list</span>Divertidos</li>
-            <li><span className="material-symbols-outlined">list</span>Varios</li>
-            <li><span className="material-symbols-outlined">list</span>Facebook</li>
-            <li><span className="material-symbols-outlined">list</span>Favoritos</li>
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>           
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>
-            <li><span className="material-symbols-outlined">list</span>Divertidos</li>
-            <li><span className="material-symbols-outlined">list</span>Divertidos</li>
-            <li><span className="material-symbols-outlined">list</span>Varios</li>
-            <li><span className="material-symbols-outlined">list</span>Facebook</li>
-            <li><span className="material-symbols-outlined">list</span>Favoritos</li>
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>           
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>
-            <li><span className="material-symbols-outlined">list</span>Divertidos</li>
-            <li><span className="material-symbols-outlined">list</span>Divertidos</li>
-            <li><span className="material-symbols-outlined">list</span>Varios</li>
-            <li><span className="material-symbols-outlined">list</span>Facebook</li>
-            <li><span className="material-symbols-outlined">list</span>Favoritos</li>
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>           
-            <li><span className="material-symbols-outlined">list</span>Estetica</li>
-            <li><span className="material-symbols-outlined">list</span>Divertidos</li>
-        </ul>
+      <ul className="lists">
+      {superList != null ? (
+          superList.map( link => (
+            <li><span className="material-symbols-outlined">list</span>{link.nombre}</li>
+          ))
+        )
+        :(
+          <p>No Listas</p>
+        )
+      }
+      </ul>
     </>
   )
 }
