@@ -70,7 +70,7 @@ function App() {
     </nav>
     <section className='content'>
       <aside>
-        <AddBox />
+        <AddBox setSuperList={setSuperList}/>
         <ListLists superList={superList}/>
       </aside>
       <section className='link-list'>

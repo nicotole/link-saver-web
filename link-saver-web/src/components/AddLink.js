@@ -22,7 +22,7 @@ export const AddLink = ({setCurrentList}) => {
 
   return (
     <> 
-      <form  onSubmit={ getFormData }>
+      <form onSubmit={ getFormData }>
         <div className="link-card link-input">
           <input required name="newLink" type="text" placeholder="Nuevo link..."></input>
           <button>Agregar</button>
