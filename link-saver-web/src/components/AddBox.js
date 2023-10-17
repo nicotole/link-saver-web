@@ -23,16 +23,17 @@ export const AddBox = ({setSuperList}) => {
 
   return (
     <>
-        <div className="add-box">
-          <p>Mis listas</p>
-          <form onSubmit={ getFormData }>
-            <input required name="newList" type="text" placeholder="Lista Nueva..."></input>
-            <button>+</button>
-          </form>
+      <div className="add-box">
+        <p>Mis listas</p>
+        <form onSubmit={ getFormData }>
+          <input required name="newList" type="text" placeholder="Lista Nueva..."></input>
+          {/* <button>+</button> */}
           <button>
             <span className="material-symbols-outlined circle">add_circle</span>
           </button>
-        </div>
+        </form>
+        
+      </div>
     </>
   )
 }
