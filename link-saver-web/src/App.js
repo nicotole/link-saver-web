@@ -13,7 +13,7 @@ function App() {
       {
         id: 1,
         nombre: 'Youtube',
-        enlaces: [
+        links: [
           { id: 0, link: 'https://www.youtube.com/watch?v=OPf0YbXqDm0&ab_channel=MarkRonsonVEVO' },
           { id: 2, link: 'https://www.youtube.com/watch?v=GBRAnuT48qo' }
         ]
@@ -21,7 +21,7 @@ function App() {
       {
         id: 2,
         nombre: 'Lista 2',
-        enlaces: [
+        links: [
           { id: 3, link: 'https://example.com/link3' },
           { id: 4, link: 'https://example.com/link4' }
         ]
@@ -49,6 +49,14 @@ function App() {
 
   //instead of useing an state to save the name and key of the sublist im gonna use a object, in fact i can use objects instead of arrays. At least for the sublist element items
 
+
+  const handleLinkClick = (clickedListId) =>{
+    //get the list by Id
+    const selectedList = superList.find(list => list.id === clickedListId);
+
+    setCurrentList(selectedList.links);
+  }
+
   return (
   <>
     {/* <body> */}
@@ -71,7 +79,10 @@ function App() {
     <section className='content'>
       <aside>
         <AddBox setSuperList={setSuperList}/>
-        <ListLists superList={superList}/>
+        <ListLists 
+          superList={superList}
+          clickHandler = {handleLinkClick}
+        />
       </aside>
       <section className='link-list'>
         <AddLink setCurrentList={setCurrentList}/>

@@ -7,4 +7,4 @@ export const SearchBar = () => {
         <input type="text" placeholder="Buscar..."/>
     </div>
   )
-}
+} 

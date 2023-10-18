@@ -1,12 +1,15 @@
 import React from 'react'
 
-export const ListLists = ({superList}) => {
+export const ListLists = ({superList, clickHandler}) => {
   return (
     <>
       <ul className="lists">
       {superList != null ? (
-          superList.map( link => (
-            <li><span className="material-symbols-outlined">list</span>{link.nombre}</li>
+          superList.map( list => (
+            <li key={list.id} onClick={ () => clickHandler(list.id)}>
+              <span className="material-symbols-outlined">list</span>
+                {list.nombre}
+            </li>
           ))
         )
         :(
