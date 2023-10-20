@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const AddBox = ({setSuperList}) => {
+export const AddBox = ({setSuperList, setCurrentList}) => {
 
   const getFormData = e =>{
     e.preventDefault();
@@ -10,12 +10,19 @@ export const AddBox = ({setSuperList}) => {
     let newListObj = {
       id: new Date().getTime(),
       nombre: newListName,
-      enlaces: []
+      enlaces: [  ]
     }
 
+    console.log("Nuevo objeto de lista:", newListObj); 
+
     setSuperList( elements => {
+      console.log("Antes de actualizar superList:", elements);
+      // setCurrentList(newListObj.enlaces);
       return[newListObj, ...elements];
     })
+
+    setCurrentList(newListObj.enlaces);
+   
 
   }
 

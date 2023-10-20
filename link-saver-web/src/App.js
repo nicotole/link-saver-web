@@ -50,12 +50,19 @@ function App() {
   //instead of useing an state to save the name and key of the sublist im gonna use a object, in fact i can use objects instead of arrays. At least for the sublist element items
 
 
-  const handleLinkClick = (clickedListId) =>{
+  const handleListClick = (clickedListId) =>{
     //get the list by Id
     const selectedList = superList.find(list => list.id === clickedListId);
 
-    setCurrentList(selectedList.links);
+    if (selectedList) {
+      setCurrentList(selectedList.links);
+      console.log("La superlista ahora es: " + superList)
+    } else {
+      console.log(`No se encontró una lista con el ID ${clickedListId}`);
+      console.log(superList);
+    }
   }
+
 
   return (
   <>
@@ -78,10 +85,12 @@ function App() {
     </nav>
     <section className='content'>
       <aside>
-        <AddBox setSuperList={setSuperList}/>
+        <AddBox setSuperList={setSuperList}
+          setCurrentList = {setCurrentList}
+        />
         <ListLists 
           superList={superList}
-          clickHandler = {handleLinkClick}
+          clickHandler = {handleListClick}
         />
       </aside>
       <section className='link-list'>
