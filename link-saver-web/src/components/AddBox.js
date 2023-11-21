@@ -10,7 +10,7 @@ export const AddBox = ({setSuperList, setCurrentList}) => {
     let newListObj = {
       id: new Date().getTime(),
       nombre: newListName,
-      enlaces: [  ]
+      links: [  ]
     }
 
     console.log("Nuevo objeto de lista:", newListObj); 
@@ -21,7 +21,8 @@ export const AddBox = ({setSuperList, setCurrentList}) => {
       return[newListObj, ...elements];
     })
 
-    setCurrentList(newListObj.enlaces);
+    console.log("Enlaces antes de setear: " + newListObj.links);
+    setCurrentList(newListObj);
    
 
   }
