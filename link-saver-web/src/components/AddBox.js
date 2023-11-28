@@ -24,6 +24,7 @@ export const AddBox = ({setSuperList, setCurrentList}) => {
     console.log("Enlaces antes de setear: " + newListObj.links);
     setCurrentList(newListObj);
    
+    e.target.newList.value = ''; //let the input "newList" ready for the new lists
 
   }
 

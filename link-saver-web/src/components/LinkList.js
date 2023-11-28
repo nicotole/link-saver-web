@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from './Link';
 
-export const LinkList = ({ currentList }) => {
+export const LinkList = ({ currentList, onDeleteLink }) => {
   let links = currentList.links;
   console.log("Links " + links);
   return (
@@ -9,7 +9,7 @@ export const LinkList = ({ currentList }) => {
       <ul>
         {links && links.length > 0 ? (
           links.map((link) => (
-            <Link key={link.id} link={link} />
+            <Link key={link.id} link={link} onDeleteLink={onDeleteLink}/>
           ))
         ) : (
           <p>No hay links</p>

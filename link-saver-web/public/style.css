@@ -170,6 +170,11 @@ aside{
   color: #0f0f0fb4;
 }
 
+.lists li.selected {
+  background-color: #eee;
+  /* Otros estilos para la lista seleccionada */
+}
+
 .add-box{
   display: block;
   padding: 10px 20px;
@@ -322,4 +327,5 @@ aside{
   position: sticky; 
   background-color: white;
 }
+
 
