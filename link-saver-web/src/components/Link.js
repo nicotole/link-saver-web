@@ -15,7 +15,7 @@ export const Link = ({link, onDeleteLink}) => {
             <div key={index}>{tag}</div>
           ))
         }
-        <button onClick={erase()}>Borrar</button>
+        <button type="button" onClick={erase}>Borrar</button>
       </li>
     </>
   )

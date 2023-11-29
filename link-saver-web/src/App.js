@@ -70,11 +70,24 @@ function App() {
     }));
     persistOnSuperList(newLink);
   }
-
   //instead of useing an state to save the name and key of the sublist im gonna use a object, in fact i can use objects instead of arrays. At least for the sublist element items
 
   const handleListClick = (clickedListId) =>{
     setCurrentList(superList.find(list => list.id === clickedListId));
+  }
+
+  const deleteLink = (linkId) =>{
+    const updatedSuperlist = superList.map( list => ({
+      ...list, //copy the element
+      links: list.links.filter(link => link.id !== linkId), //filter the link from the superlist
+    }));
+    const updatedCurrentList = {
+      ...currentList, //copy the prevstate
+      links: currentList.links.filter((link) => link.id !== linkId),//filter the links
+    };
+    //update the states
+    setSuperList(updatedSuperlist);
+    setCurrentList(updatedCurrentList);
   }
 
   return (
@@ -111,7 +124,7 @@ function App() {
       {superList.length > 0 ? (
         <>
           <AddLink setToCurrentList={addLinkToCurrentList} />
-          <LinkList currentList={currentList} />
+          <LinkList currentList={currentList} onDeleteLink={deleteLink}/>
         </>
       ) : null}
       </section>
