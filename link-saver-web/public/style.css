@@ -237,13 +237,10 @@ aside{
   border: 1px solid #90909061;
   font-weight: 300;
 }
-/* 
-.add-box button {
-  margin-left: 0;
-  background: transparent;
-  border: none;
-} */
 
+.add-box input:focus{
+  outline:none;
+}
 
 
 .add-box input,

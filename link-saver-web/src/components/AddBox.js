@@ -35,7 +35,7 @@ export const AddBox = ({setSuperList, setCurrentList}) => {
       <div className="add-box">
         <p>Mis listas</p>
         <form onSubmit={ getFormData }>
-          <input required name="newList" type="text" placeholder="Lista Nueva..."></input>
+          <input required name="newList" type="text" placeholder="Lista Nueva..." autoComplete="off"></input>
           {/* <button>+</button> */}
           
           <button className="plus-button">

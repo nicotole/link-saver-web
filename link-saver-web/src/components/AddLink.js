@@ -40,7 +40,7 @@ export const AddLink = ({setToCurrentList}) => {
     <> 
       <form onSubmit={ getFormData }>
         <div className="link-card link-input">
-          <input required name="newLink" type="text" placeholder="Nuevo link..."></input>
+          <input required  name="newLink" type="text" placeholder="Nuevo link..." autoComplete="off"></input>
           <button type="submit">Agregar</button>
         </div>
         <div className="tagger">
