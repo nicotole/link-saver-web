@@ -185,8 +185,33 @@ aside{
   font-size: large;
   /* margin-right: 40%; */
 }
-
+/* 
 .add-box span{
+  color: white;
+  background: rgb(58, 147, 249);
+  
+  border-radius: 50%;
+  border: none;
+
+  margin-left: 10%;
+
+  &:hover{
+    background: rgb(0, 115, 247);
+    transition: all .3s;
+  }
+} */
+
+.plus-button{
+  margin-left: 40%;
+  background: transparent;
+  border: none;
+  display: block;
+  margin-left: 0;
+  background: transparent;
+  border: none;
+}
+
+.plus-button span{
   color: white;
   background: rgb(58, 147, 249);
   
@@ -201,12 +226,6 @@ aside{
   }
 }
 
-.add-box button{
-  margin-left: 40%;
-  background: transparent;
-  border: none;
-}
-
 .add-box form {
   display: flex;
   flex-direction: row;
@@ -218,12 +237,14 @@ aside{
   border: 1px solid #90909061;
   font-weight: 300;
 }
-
+/* 
 .add-box button {
   margin-left: 0;
   background: transparent;
   border: none;
-}
+} */
+
+
 
 .add-box input,
 .add-box button,
@@ -266,7 +287,7 @@ aside{
   height: 100%;
   background-color: white;
   padding: 20px;
-  padding-top: 0px;
+  padding-top: 14px;
   overflow: scroll;
   scroll-behavior: smooth;
   
@@ -326,6 +347,51 @@ aside{
   top: 0; 
   position: sticky; 
   background-color: white;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 0px solid #90909061;
+  font-weight: lighter;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.input-tag-box{
+  display: flex;
+}
+
+.input-tag-box input{
+  border-radius: 50px;
+  padding-left: 10px;
+  border: none;
+  /* background-color: aquamarine; */
+  background-color: rgb(58, 147, 249);
+  font-weight: 300;
+  width: 50%;
+}
+
+.input-tag-box input:focus{
+  outline:none;
+}
+
+.input-tag-box .plus-button{
+  position:relative;
+  right: 29px;
+  top: 2px  
+}
+
+.tagger{
+  display: flex;
+  border-bottom: 1px solid #90909061;
+  padding-bottom: 10px;
+}
+
+.tagger .tag{
+  font-weight: 300;
+  padding-top: 6px;
+  margin-right: 10px;
 }
 
 

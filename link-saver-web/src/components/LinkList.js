@@ -12,7 +12,7 @@ export const LinkList = ({ currentList, onDeleteLink }) => {
             <Link key={link.id} link={link} onDeleteLink={onDeleteLink}/>
           ))
         ) : (
-          <p>No hay links</p>
+          <p></p>
         )}
       </ul>
     </>

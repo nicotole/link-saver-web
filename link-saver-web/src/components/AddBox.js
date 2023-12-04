@@ -38,7 +38,7 @@ export const AddBox = ({setSuperList, setCurrentList}) => {
           <input required name="newList" type="text" placeholder="Lista Nueva..."></input>
           {/* <button>+</button> */}
           
-          <button>
+          <button className="plus-button">
             <span className="material-symbols-outlined circle">add_circle</span>
           </button>
         </form>

@@ -3,6 +3,8 @@ import { useState } from 'react';
 
 export const AddLink = ({setToCurrentList}) => {
   
+
+
   const [tags, setTags] = useState([]);//state that represent the tags of a link
   const [newTag, setNewTag] = useState('');//state for the tag that we are creating
 
@@ -20,12 +22,19 @@ export const AddLink = ({setToCurrentList}) => {
     setToCurrentList(newLinkObj);
     setTags([]); //reset for the next link
     setNewTag('');//reset fot the next link
+
+    target.newLink.value = '';//clean the input
   }
 
   const addTag = () =>{
-    setTags([...tags, newTag]);//add new tag
-    setNewTag('');//We clear the new label field after adding it
+    if (newTag.trim() !== '') {//only adds the tag if contains anything other than whitespace
+      setTags([...tags, newTag]);//add new tag
+      setNewTag('');//We clear the new label field after adding it
+    }   
   }
+
+  
+  
 
   return (
     <> 
@@ -34,15 +43,21 @@ export const AddLink = ({setToCurrentList}) => {
           <input required name="newLink" type="text" placeholder="Nuevo link..."></input>
           <button type="submit">Agregar</button>
         </div>
-        {
-          tags.map((tag, index) => (
-            <div key={index}>{tag}</div>
-          ))
-        }
-        <input name="newTag" type="text" value={newTag} placeholder="#tag"
-          onChange={ (e) => setNewTag(e.target.value)}
-        ></input>
-        <button type="button" onClick={addTag}>+</button>
+        <div className="tagger">
+          {
+            tags.map((tag, index) => (
+              <div className="tag" key={index}>#{tag}</div>
+            ))
+          }
+          <div className="input-tag-box">
+            <input name="newTag" type="text" value={newTag} placeholder="#etiqueta"
+              onChange={ (e) => setNewTag(e.target.value)}
+            ></input> 
+            <button className="plus-button" type="button" onClick={addTag}>
+              <span className="material-symbols-outlined circle">add_circle</span>
+            </button>
+          </div>
+        </div>
       </form>
     </>
   )
