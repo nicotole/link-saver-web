@@ -391,4 +391,10 @@ aside{
   margin-right: 10px;
 }
 
+.tag{
+  display: flex
+}
 
+.tag p{
+  font-weight: 300;
+}

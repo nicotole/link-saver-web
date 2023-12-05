@@ -33,8 +33,11 @@ export const AddLink = ({setToCurrentList}) => {
     }   
   }
 
-  
-  
+  const deleteTag = (tagToDelete) => {
+    const updatedTags = tags.filter((tag) => tag !== tagToDelete);
+    setTags(updatedTags);
+    console.log(tags);
+  }
 
   return (
     <> 
@@ -46,7 +49,12 @@ export const AddLink = ({setToCurrentList}) => {
         <div className="tagger">
           {
             tags.map((tag, index) => (
-              <div className="tag" key={index}>#{tag}</div>
+              <div className="tag" key={index}>
+                <p>#{tag}</p>
+                <button type="button" onClick={ () => {deleteTag(tag)}}>
+                  <span className="material-symbols-outlined">close</span>
+                </button>
+              </div>
             ))
           }
           <div className="input-tag-box">

@@ -11,7 +11,7 @@ export const ListLists = ({superList, clickHandler, selectedListId}) => {
                 className={selectedListId === list.id ? 'selected' : ''}
             >
               <span className="material-symbols-outlined">list</span>
-                {list.nombre}
+                <p className="truncate">{list.nombre}</p>
             </li>
           ))
         )
