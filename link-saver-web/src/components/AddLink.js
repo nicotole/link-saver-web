@@ -51,8 +51,8 @@ export const AddLink = ({setToCurrentList}) => {
             tags.map((tag, index) => (
               <div className="tag" key={index}>
                 <p>#{tag}</p>
-                <button type="button" onClick={ () => {deleteTag(tag)}}>
-                  <span className="material-symbols-outlined">close</span>
+                <button className="remove-tag" type="button" onClick={ () => {deleteTag(tag)}}>
+                  <span className="material-symbols-outlined circle">close</span>
                 </button>
               </div>
             ))

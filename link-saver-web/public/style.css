@@ -379,6 +379,28 @@ aside{
   top: 2px  
 }
 
+.tag {
+  border-radius: 25%;
+  background-color: #f0f0f0;
+  border-radius: 52px 53px 53px 53px;
+  -webkit-border-radius: 52px 53px 53px 53px;
+  -moz-border-radius: 52px 53px 53px 53px;
+}
+
+.tag p {
+  padding-left: 10px;
+  padding-right: 1px;
+}
+
+.remove-tag span , .remove-tag{
+  height: 24px;
+  width: 24px;
+  color: white;
+  /* background: rgb(58, 147, 249); */
+  border-radius: 50%;
+  border: none;
+}
+
 .tagger{
   display: flex;
   border-bottom: 1px solid #90909061;
@@ -387,12 +409,12 @@ aside{
 
 .tagger .tag{
   font-weight: 300;
-  padding-top: 6px;
   margin-right: 10px;
 }
 
 .tag{
-  display: flex
+  display: flex;
+  align-items: center;
 }
 
 .tag p{
