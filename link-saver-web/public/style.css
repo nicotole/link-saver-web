@@ -229,7 +229,7 @@ aside{
 .add-box form {
   display: flex;
   flex-direction: row;
-  
+  margin-top: 10px;
 }
 
 .add-box input {
@@ -389,7 +389,6 @@ aside{
 
 .tag p {
   padding-left: 10px;
-  padding-right: 1px;
 }
 
 .remove-tag span , .remove-tag{
